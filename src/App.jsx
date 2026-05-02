@@ -21,6 +21,8 @@ export default function App() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [shelfOffset, setShelfOffset] = useState(0)
   const shelfRef = useRef(null)
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const recordSize = isMobile ? 120 : 200; // Smaller records for mobile
 
   const activeRecord = activeIdx !== null ? records[activeIdx] : null
   const ContentComponent = activeRecord ? contentMap[activeRecord.id] : null
@@ -118,12 +120,12 @@ export default function App() {
             className="wood-shelf"
             style={{
               borderRadius: '6px 6px 0 0',
-              padding: '24px 28px 0',
+              padding: isMobile ? '12px 10px 0' : '24px 28px 0',
               display: 'flex',
               alignItems: 'flex-end',
               justifyContent: 'center',
               gap: 0,
-              minHeight: 300,
+              minHeight: isMobile ? 180 : 300,
               position: 'relative',
               overflow: 'visible',
               borderTop: '2px solid #6B4423',
@@ -142,7 +144,7 @@ export default function App() {
                   style={{
                     position: 'relative',
                     zIndex: zIdx,
-                    marginRight: -20,
+                    marginRight: isMobile ? -40 : -20,
                     cursor: 'pointer',
                     transformOrigin: 'bottom center',
                   }}
@@ -156,7 +158,7 @@ export default function App() {
                 >
                   <VinylRecord
                     record={record}
-                    size={200}
+                    size={recordSize}
                     isActive={isActive}
                     isPlaying={isActive && isPlaying}
                   />
