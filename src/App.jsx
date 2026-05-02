@@ -64,8 +64,8 @@ export default function App() {
   const rightIdx = (centerIdx + 1) % records.length
 
   const vw = typeof window !== 'undefined' ? window.innerWidth : 400
-  const centerSize = Math.min(vw * 0.55, 260)
-  const sideSize = Math.min(vw * 0.32, 160)
+  const centerSize = Math.min(Math.max(vw * 0.18, 160), 220)
+  const sideSize = Math.min(Math.max(vw * 0.11, 100), 140)
 
   return (
     <div style={{ minHeight: '100vh', background: '#fbfbf8', overflowX: 'hidden' }}>
@@ -163,7 +163,7 @@ export default function App() {
             animate={{ opacity: 1 }}
             style={{
               position: 'absolute',
-              left: -sideSize * 0.4,
+              left: vw > 768 ? sideSize * 0.1 : -sideSize * 0.4,
               bottom: 16,
               zIndex: 5,
               opacity: 0.45,
@@ -224,7 +224,7 @@ export default function App() {
             animate={{ opacity: 1 }}
             style={{
               position: 'absolute',
-              right: -sideSize * 0.4,
+              right: vw > 768 ? sideSize * 0.1 : -sideSize * 0.4,
               bottom: 16,
               zIndex: 5,
               opacity: 0.45,
