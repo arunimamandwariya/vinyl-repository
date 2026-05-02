@@ -323,7 +323,7 @@ export default function App() {
             {/* Content body */}
             <div
               className="content-panel"
-              style={{ padding: '2rem 2.2rem', borderRadius: '0 0 6px 6px', maxHeight: '70vh', overflowY: 'auto' }}
+              style={{ padding: '2rem 1.5rem', borderRadius: '0 0 6px 6px', maxHeight: 'none', overflowY: 'auto' }}
             >
               <ContentComponent />
             </div>
