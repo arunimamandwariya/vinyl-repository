@@ -28,8 +28,7 @@ useEffect(() => {
   window.addEventListener('resize', check)
   return () => window.removeEventListener('resize', check)
 }, [])
-  const recordSize = isMobile ? 110 : 200
-
+const recordSize = 110
   const activeRecord = activeIdx !== null ? records[activeIdx] : null
   const ContentComponent = activeRecord ? contentMap[activeRecord.id] : null
 
