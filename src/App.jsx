@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import VinylRecord from './VinylRecord'
 import { records } from './data'
@@ -21,8 +21,14 @@ export default function App() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [shelfOffset, setShelfOffset] = useState(0)
   const shelfRef = useRef(null)
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-  const recordSize = isMobile ? 120 : 200; // Smaller records for mobile
+  const [isMobile, setIsMobile] = useState(false)
+useEffect(() => {
+  const check = () => setIsMobile(window.innerWidth < 768)
+  check()
+  window.addEventListener('resize', check)
+  return () => window.removeEventListener('resize', check)
+}, [])
+  const recordSize = isMobile ? 90 : 200 // Smaller records for mobile
 
   const activeRecord = activeIdx !== null ? records[activeIdx] : null
   const ContentComponent = activeRecord ? contentMap[activeRecord.id] : null
@@ -93,7 +99,7 @@ export default function App() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.8, ease: 'easeOut' }}
-        style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 1rem', position: 'relative', maxWidth: 1200, margin: '0 auto' }}
+        style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0.10px', position: 'relative', maxWidth: 1200, margin: '0 auto', overflow: 'visible' }}
       >
         {/* Left arrow */}
         <motion.button
@@ -103,7 +109,7 @@ export default function App() {
           style={{
             background: 'none', border: '1px solid rgba(196,120,58,0.3)',
             borderRadius: 3, color: '#C4783A', cursor: 'pointer',
-            width: 44, height: 44, display: 'flex', alignItems: 'center', justifyContent: 'center',
+            width: 44, height: 44, display: isMobile ? 'flex' : 'none', alignItems: 'center', justifyContent: 'center',
             fontSize: '1.2rem', flexShrink: 0,
             transition: 'all 0.2s',
             marginRight: '1rem',
@@ -144,7 +150,7 @@ export default function App() {
                   style={{
                     position: 'relative',
                     zIndex: zIdx,
-                    marginRight: isMobile ? -40 : -20,
+                    marginRight: isMobile ? -28 : -20,
                     cursor: 'pointer',
                     transformOrigin: 'bottom center',
                   }}
@@ -187,13 +193,13 @@ export default function App() {
           />
 
           {/* Record names below shelf */}
-          <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 0 0', marginRight: '50px', marginLeft: '50px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-around', padding: '10px 4px 0' }}>
             {records.map((r, i) => (
               <div
                 key={r.id}
                 onClick={() => handleVinylClick(i)}
                 style={{
-                  width: 148 - 20,
+                  width: `${100 / records.length}%`,
                   textAlign: 'center',
                   cursor: 'pointer',
                   padding: '0 4px',
