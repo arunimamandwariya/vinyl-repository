@@ -109,7 +109,7 @@ useEffect(() => {
           style={{
             background: 'none', border: '1px solid rgba(196,120,58,0.3)',
             borderRadius: 3, color: '#C4783A', cursor: 'pointer',
-            width: 44, height: 44, display: 'none', alignItems: 'center', justifyContent: 'center',
+            width: 44, height: 44, display: isMobile ? 'none' : 'flex', alignItems: 'center', justifyContent: 'center',
             fontSize: '1.2rem', flexShrink: 0,
             transition: 'all 0.2s',
             marginRight: '1rem',
@@ -138,7 +138,6 @@ useEffect(() => {
               gap: 0,
               minHeight: isMobile ? 180 : 300,
               position: 'relative',
-              overflow: 'visible',
               borderTop: '2px solid #6B4423',
               borderLeft: '2px solid #4A2E18',
               borderRight: '2px solid #4A2E18',
