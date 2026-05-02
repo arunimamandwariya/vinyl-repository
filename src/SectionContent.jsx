@@ -175,7 +175,7 @@ export function ResumeContent() {
       <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
         {[
           { label: 'Consulting Resume', href: 'https://drive.google.com/file/d/1MK8jQq_ns7F9pqCdEBb3itFRMV_qppSe/view?usp=sharing' },
-          { label: 'Academic Resume', href: 'https://drive.google.com/file/d/13iD0yohwS0SgKoW6kHuSmmf9WBz7O0Da/view?usp=share_link' },
+          { label: 'Academic Resume', href: 'https://drive.google.com/file/d/1nKjPt4szteYAfPgW6C91CmdxIb-fVbi0/view?usp=sharing' },
         ].map(({ label, href }) => (
           <a key={label} href={href} target="_blank" rel="noopener noreferrer" style={{
             fontFamily: '"DM Mono", monospace', fontSize: '9px', letterSpacing: '0.18em',
