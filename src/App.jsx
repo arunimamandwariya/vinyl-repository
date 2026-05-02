@@ -163,7 +163,7 @@ export default function App() {
             animate={{ opacity: 1 }}
             style={{
               position: 'absolute',
-              left: vw > 768 ? sideSize * 0.1 : -sideSize * 0.4,
+              left: -sideSize * 0.4,
               bottom: 16,
               zIndex: 5,
               opacity: 0.45,
@@ -224,7 +224,7 @@ export default function App() {
             animate={{ opacity: 1 }}
             style={{
               position: 'absolute',
-              right: vw > 768 ? sideSize * 0.1 : -sideSize * 0.4,
+              right: -sideSize * 0.4,
               bottom: 16,
               zIndex: 5,
               opacity: 0.45,
