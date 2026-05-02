@@ -28,7 +28,7 @@ useEffect(() => {
   window.addEventListener('resize', check)
   return () => window.removeEventListener('resize', check)
 }, [])
-  const recordSize = isMobile ? 90 : 200 // Smaller records for mobile
+  const recordSize = isMobile ? 110 : 200
 
   const activeRecord = activeIdx !== null ? records[activeIdx] : null
   const ContentComponent = activeRecord ? contentMap[activeRecord.id] : null
@@ -90,7 +90,7 @@ useEffect(() => {
         style={{ textAlign: 'center', marginBottom: '1.2rem' }}
       >
         <p style={{ fontFamily: '"DM Mono", monospace', fontSize: '9px', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#B09070' }}>
-          ↑ hover to browse · click to open · use arrows to navigate
+          {isMobile ? '← swipe shelf to browse · tap to open →' : '↑ hover to browse · click to open · use arrows to navigate'}
         </p>
       </motion.div>
 
@@ -109,7 +109,7 @@ useEffect(() => {
           style={{
             background: 'none', border: '1px solid rgba(196,120,58,0.3)',
             borderRadius: 3, color: '#C4783A', cursor: 'pointer',
-            width: 44, height: 44, display: isMobile ? 'flex' : 'none', alignItems: 'center', justifyContent: 'center',
+            width: 44, height: 44, display: 'none', alignItems: 'center', justifyContent: 'center',
             fontSize: '1.2rem', flexShrink: 0,
             transition: 'all 0.2s',
             marginRight: '1rem',
@@ -129,7 +129,12 @@ useEffect(() => {
               padding: isMobile ? '12px 10px 0' : '24px 28px 0',
               display: 'flex',
               alignItems: 'flex-end',
-              justifyContent: 'center',
+              justifyContent: isMobile ? 'flex-start' : 'center',
+              overflowX: isMobile ? 'auto' : 'visible',
+              overflowY: 'visible',
+              WebkitOverflowScrolling: 'touch',
+              scrollbarWidth: 'none',
+              paddingBottom: isMobile ? 8 : 0,
               gap: 0,
               minHeight: isMobile ? 180 : 300,
               position: 'relative',
@@ -150,7 +155,8 @@ useEffect(() => {
                   style={{
                     position: 'relative',
                     zIndex: zIdx,
-                    marginRight: isMobile ? -28 : -20,
+                    marginRight: isMobile ? 8 : -20,
+                    flexShrink: 0,
                     cursor: 'pointer',
                     transformOrigin: 'bottom center',
                   }}
@@ -230,7 +236,7 @@ useEffect(() => {
             background: 'rgba(196,120,58,0.1)',
             border: '1px solid rgba(196,120,58,0.5)',
             borderRadius: 3, color: '#C4783A', cursor: 'pointer',
-            width: 52, height: 52, display: 'flex', alignItems: 'center', justifyContent: 'center',
+            width: 52, height: 52, display: isMobile ? 'none' : 'flex', alignItems: 'center', justifyContent: 'center',
             fontSize: '1.4rem', flexShrink: 0,
             transition: 'all 0.2s',
             marginLeft: '1rem',
