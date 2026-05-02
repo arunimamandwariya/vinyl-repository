@@ -61,7 +61,9 @@ export default function App() {
   }
 
   const leftIdx = (centerIdx - 1 + records.length) % records.length
+  const leftIdx2 = (centerIdx - 2 + records.length) % records.length
   const rightIdx = (centerIdx + 1) % records.length
+  const rightIdx2 = (centerIdx + 2) % records.length
 
   const vw = typeof window !== 'undefined' ? window.innerWidth : 400
   const centerSize = Math.min(Math.max(vw * 0.18, 160), 220)
@@ -157,30 +159,30 @@ export default function App() {
             ›
           </motion.button>
 
-          {/* Left peeking record */}
-          <motion.div
-            key={`left-${leftIdx}`}
-            animate={{ opacity: 1 }}
-            style={{
-              position: 'absolute',
-              left: -sideSize * 0.4,
-              bottom: 16,
-              zIndex: 5,
-              opacity: 0.45,
-              filter: 'brightness(0.55)',
-              cursor: 'pointer',
-              pointerEvents: 'auto',
-            }}
-            onClick={goPrev}
-          >
-            <VinylRecord
-              record={records[leftIdx]}
-              size={sideSize}
-              isActive={false}
-              isPlaying={false}
-            />
-          </motion.div>
+          {{/* Left peeking record 2 — desktop only */}
+{vw > 768 && (
+  <motion.div
+    key={`left2-${leftIdx2}`}
+    animate={{ opacity: 1 }}
+    style={{
+      position: 'absolute',
+      left: sideSize * 0.2,
+      bottom: 16,
+      zIndex: 4,
+      opacity: 0.3,
+      filter: 'brightness(0.45)',
+      cursor: 'pointer',
+    }}
+    onClick={goPrev}
+  >
+    <VinylRecord record={records[leftIdx2]} size={sideSize * 0.85} isActive={false} isPlaying={false} />
+  </motion.div>
+)}
 
+{/* Left peeking record */}
+<motion.div
+  key={`left-${leftIdx}`}
+  
           {/* Center record */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -219,29 +221,27 @@ export default function App() {
           </AnimatePresence>
 
           {/* Right peeking record */}
-          <motion.div
-            key={`right-${rightIdx}`}
-            animate={{ opacity: 1 }}
-            style={{
-              position: 'absolute',
-              right: -sideSize * 0.4,
-              bottom: 16,
-              zIndex: 5,
-              opacity: 0.45,
-              filter: 'brightness(0.55)',
-              cursor: 'pointer',
-              pointerEvents: 'auto',
-            }}
-            onClick={goNext}
-          >
-            <VinylRecord
-              record={records[rightIdx]}
-              size={sideSize}
-              isActive={false}
-              isPlaying={false}
-            />
-          </motion.div>
-        </div>
+<motion.div
+  key={`right-${rightIdx}`}
+            {/* Right peeking record 2 — desktop only */}
+{vw > 768 && (
+  <motion.div
+    key={`right2-${rightIdx2}`}
+    animate={{ opacity: 1 }}
+    style={{
+      position: 'absolute',
+      right: sideSize * 0.2,
+      bottom: 16,
+      zIndex: 4,
+      opacity: 0.3,
+      filter: 'brightness(0.45)',
+      cursor: 'pointer',
+    }}
+    onClick={goNext}
+  >
+    <VinylRecord record={records[rightIdx2]} size={sideSize * 0.85} isActive={false} isPlaying={false} />
+  </motion.div>
+)}
 
         {/* Shelf ledge */}
         <div
