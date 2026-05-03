@@ -1,22 +1,53 @@
 export function IntroContent() {
   return (
     <div className="fade-up">
-            <h2 style={{ fontFamily: '"Playfair Display", serif', fontSize: '2rem', fontWeight: 400, color: '#1C1410', lineHeight: 1.2, marginBottom: '0.4rem' }}>
-        Arunima Mandwariya
-      </h2>
+      {/* Photo + Name row */}
+      <div style={{
+        display: 'flex',
+        gap: '1.5rem',
+        alignItems: 'flex-start',
+        marginBottom: '1.5rem',
+        flexWrap: 'wrap',
+      }}>
+        {/* Photo */}
+        <div style={{ flexShrink: 0 }}>
+          <img
+            src="/vinyl-repository/photo.jpg"
+            alt="Arunima Mandwariya"
+            style={{
+              width: 'clamp(120px, 28vw, 180px)',
+              aspectRatio: '1/1',
+              objectFit: 'cover',
+              objectPosition: 'center top',
+              borderRadius: '4px',
+              display: 'block',
+              filter: 'sepia(8%)',
+            }}
+          />
+        </div>
 
-      <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
-        {['Political Science', 'China Studies', 'Political Sociology'].map(t => (
-          <span key={t} className="tag-pill">{t}</span>
-        ))}
+        {/* Name + tags */}
+        <div style={{ flex: 1, minWidth: 180 }}>
+          <h2 style={{ fontFamily: '"Playfair Display", serif', fontSize: '2rem', fontWeight: 400, color: '#1C1410', lineHeight: 1.2, marginBottom: '0.6rem' }}>
+            Arunima Mandwariya
+          </h2>
+          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '1rem' }}>
+            {['Political Science', 'China Studies', 'Political Sociology'].map(t => (
+              <span key={t} className="tag-pill">{t}</span>
+            ))}
+          </div>
+          <p style={{ fontSize: '0.95rem', lineHeight: 1.85, color: '#4A3428', fontWeight: 300, margin: 0 }}>
+            I'm a Political Science student interested in migration, political economy, and political sociology, with a growing focus on China studies and state-society relations.
+          </p>
+        </div>
       </div>
 
+      {/* Rest of text */}
       <div style={{ borderTop: '1px solid rgba(196,120,58,0.15)', paddingTop: '1.2rem', marginBottom: '1.2rem' }}>
         {[
-          `I'm Arunima Mandwariya, a Political Science student interested in migration, political economy, and political sociology, with a growing focus on China studies and state-society relations.`,
           `I am particularly curious about how states regulate movement, labour, identity, and everyday life through internal migration systems like China's Hukou framework.`,
           `Beyond academics, I'm a naturally curious person who enjoys asking questions, thinking through possible solutions or interventions, and often turning those ideas into projects. I enjoy working through logistics (spreadsheets are a personal favourite) and I tend to work best in structured settings.`,
-          `Over the years, I have worked across student leadership, publications, social media, research, and event management roles. `,
+          `Over the years, I have worked across student leadership, publications, social media, research, and event management roles.`,
           `Outside work, I'm also interested in stories of textiles, languages, and food.`,
         ].map((p, i) => (
           <p key={i} style={{ fontSize: '0.95rem', lineHeight: 1.85, color: '#4A3428', fontWeight: 300, marginBottom: '0.9rem' }}>{p}</p>
