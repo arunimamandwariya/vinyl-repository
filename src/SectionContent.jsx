@@ -174,7 +174,7 @@ export function WritingContent() {
         <div style={{ borderBottom: '1px solid rgba(196,120,58,0.12)', paddingBottom: '1.2rem' }}>
           <div style={{ display: 'flex', gap: '8px', marginBottom: '0.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
             <span className="tag-pill">Substack</span>
-            <span style={{ fontFamily: '"DM Mono", monospace', fontSize: '9px', color: '#8B7355' }}>12 min read</span>
+            <span style={{ fontFamily: '"DM Mono", monospace', fontSize: '9px', color: '#8B7355' }}>5 min read</span>
           </div>
           <h3 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.05rem', color: '#1C1410', marginBottom: '0.5rem', lineHeight: 1.4 }}>
             The Company That Runs China's Digital Life: Tencent, the State, and What It Means for Everyone Using Its Services
@@ -186,12 +186,24 @@ export function WritingContent() {
         <div style={{ borderBottom: '1px solid rgba(196,120,58,0.12)', paddingBottom: '1.2rem' }}>
           <div style={{ display: 'flex', gap: '8px', marginBottom: '0.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
             <span className="tag-pill">Substack</span>
-            <span style={{ fontFamily: '"DM Mono", monospace', fontSize: '9px', color: '#8B7355' }}>12 min read</span>
+            <span style={{ fontFamily: '"DM Mono", monospace', fontSize: '9px', color: '#8B7355' }}>6 min read</span>
           </div>
           <h3 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.05rem', color: '#1C1410', marginBottom: '0.5rem', lineHeight: 1.4 }}>
             Seeing Past the Pattern
           </h3>
           <a href="https://arunimamandwariya.substack.com/p/seeing-past-the-pattern" target="_blank" rel="noopener noreferrer" style={{ fontFamily: '"DM Mono", monospace', fontSize: '9px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C4783A', textDecoration: 'none', borderBottom: '1px solid rgba(196,120,58,0.4)', paddingBottom: '1px' }}>Read on Substack →</a>
+        </div>
+        
+        {/* Essay 3 */}
+        <div style={{ borderBottom: '1px solid rgba(196,120,58,0.12)', paddingBottom: '1.2rem' }}>
+          <div style={{ display: 'flex', gap: '8px', marginBottom: '0.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
+            <span className="tag-pill">Substack</span>
+            <span style={{ fontFamily: '"DM Mono", monospace', fontSize: '9px', color: '#8B7355' }}>10 min read</span>
+          </div>
+          <h3 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.05rem', color: '#1C1410', marginBottom: '0.5rem', lineHeight: 1.4 }}>
+            Where Did ‘ ण ’ Go?
+          </h3>
+          <a href="https://arunimamandwariya.substack.com/p/where-did-go" target="_blank" rel="noopener noreferrer" style={{ fontFamily: '"DM Mono", monospace', fontSize: '9px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C4783A', textDecoration: 'none', borderBottom: '1px solid rgba(196,120,58,0.4)', paddingBottom: '1px' }}>Read on Substack →</a>
         </div>
 
         {/* Coming soon */}
