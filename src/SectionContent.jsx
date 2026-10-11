@@ -69,7 +69,7 @@ export function IntroContent() {
 export function PublicationsContent() {
   return (
     <div className="fade-up">
-            <h2 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.8rem', fontWeight: 400, fontStyle: 'italic', color: '#1C1410', marginBottom: '1.8rem' }}>
+      <h2 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.8rem', fontWeight: 400, fontStyle: 'italic', color: '#1C1410', marginBottom: '1.8rem' }}>
         The Archive
       </h2>
 
@@ -88,7 +88,8 @@ export function PublicationsContent() {
             I spent time learning about Indian textile traditions. While interning at People's Archive of Rural India, I had the opportunity to report a story that brought those interests together. This photo-essay follows a family of hand block printers who migrated from Chanderi to Indore, tracing how their craft survives through intergenerational knowledge, gendered labour, and quiet resilience in the face of economic uncertainty.
           </p>
           <div style={{ display: 'flex', gap: '8px' }}>
-            <a href="https://ruralindiaonline.org/article/in-indore-printing-on-thin-margins" target="_blank" rel="noopener noreferrer" style={{ fontFamily: '"DM Mono", monospace', fontSize: '9px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C4783A', textDecoration: 'none', borderBottom: '1px solid rgba(196,120,58,0.4)', paddingBottom: '1px' }}>Read Article →</a>          </div>
+            <a href="https://ruralindiaonline.org/article/in-indore-printing-on-thin-margins" target="_blank" rel="noopener noreferrer" style={{ fontFamily: '"DM Mono", monospace', fontSize: '9px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C4783A', textDecoration: 'none', borderBottom: '1px solid rgba(196,120,58,0.4)', paddingBottom: '1px' }}>Read Article →</a>
+          </div>
         </div>
 
         {/* Pub 2 */}
@@ -118,7 +119,7 @@ export function PublicationsContent() {
 export function ProjectsContent() {
   return (
     <div className="fade-up">
-            <h2 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.8rem', fontWeight: 400, fontStyle: 'italic', color: '#1C1410', marginBottom: '1.8rem' }}>
+      <h2 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.8rem', fontWeight: 400, fontStyle: 'italic', color: '#1C1410', marginBottom: '1.8rem' }}>
         What I Built
       </h2>
 
@@ -162,12 +163,13 @@ export function ProjectsContent() {
 export function WritingContent() {
   return (
     <div className="fade-up">
-            <h2 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.8rem', fontWeight: 400, fontStyle: 'italic', color: '#1C1410', marginBottom: '0.5rem' }}>
+      <h2 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.8rem', fontWeight: 400, fontStyle: 'italic', color: '#1C1410', marginBottom: '0.5rem' }}>
         Essays & Notes
       </h2>
       <p style={{ fontSize: '0.88rem', color: '#8B7355', fontStyle: 'italic', marginBottom: '1.8rem', fontWeight: 300 }}>Late-night thinking, research reflections, and longer reads.</p>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+
         {/* Essay 1 */}
         <div style={{ borderBottom: '1px solid rgba(196,120,58,0.12)', paddingBottom: '1.2rem' }}>
           <div style={{ display: 'flex', gap: '8px', marginBottom: '0.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
@@ -180,7 +182,19 @@ export function WritingContent() {
           <a href="https://arunimamandwariya.substack.com/p/the-company-that-runs-chinas-digital" target="_blank" rel="noopener noreferrer" style={{ fontFamily: '"DM Mono", monospace', fontSize: '9px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C4783A', textDecoration: 'none', borderBottom: '1px solid rgba(196,120,58,0.4)', paddingBottom: '1px' }}>Read on Substack →</a>
         </div>
 
-        {/* Essay 2 — coming soon */}
+        {/* Essay 2 */}
+        <div style={{ borderBottom: '1px solid rgba(196,120,58,0.12)', paddingBottom: '1.2rem' }}>
+          <div style={{ display: 'flex', gap: '8px', marginBottom: '0.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
+            <span className="tag-pill">Substack</span>
+            <span style={{ fontFamily: '"DM Mono", monospace', fontSize: '9px', color: '#8B7355' }}>12 min read</span>
+          </div>
+          <h3 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.05rem', color: '#1C1410', marginBottom: '0.5rem', lineHeight: 1.4 }}>
+            Seeing Past the Pattern
+          </h3>
+          <a href="https://arunimamandwariya.substack.com/p/seeing-past-the-pattern" target="_blank" rel="noopener noreferrer" style={{ fontFamily: '"DM Mono", monospace', fontSize: '9px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C4783A', textDecoration: 'none', borderBottom: '1px solid rgba(196,120,58,0.4)', paddingBottom: '1px' }}>Read on Substack →</a>
+        </div>
+
+        {/* Coming soon */}
         <div style={{ borderBottom: '1px solid rgba(196,120,58,0.12)', paddingBottom: '1.2rem', opacity: 0.65 }}>
           <div style={{ display: 'flex', gap: '8px', marginBottom: '0.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
             <span className="tag-pill" style={{ opacity: 0.6 }}>Coming Soon</span>
@@ -191,6 +205,7 @@ export function WritingContent() {
           </h3>
           <p style={{ fontSize: '0.82rem', color: '#8B7355', fontStyle: 'italic', marginTop: '0.4rem' }}>work in progress</p>
         </div>
+
       </div>
     </div>
   )
