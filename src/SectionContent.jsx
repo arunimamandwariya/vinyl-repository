@@ -232,7 +232,7 @@ export function ResumeContent() {
 
       <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
         {[
-          { label: 'Professional Resume', href: 'https://drive.google.com/file/d/12Jhx-ZU_0wfMeJ6Oxb0OxGcAQNjGKOGh/view?usp=share_link' },
+          { label: 'Professional Resume', href: 'https://drive.google.com/file/d/19zxqKeKdYr8fJn_GQL8xuvNAZYKLGZTN/view?usp=sharing' },
           { label: 'Academic Resume', href: 'https://drive.google.com/file/d/12Jhx-ZU_0wfMeJ6Oxb0OxGcAQNjGKOGh/view?usp=sharing' },
         ].map(({ label, href }) => (
           <a key={label} href={href} target="_blank" rel="noopener noreferrer" style={{
