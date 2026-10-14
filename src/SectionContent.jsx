@@ -191,7 +191,7 @@ export function WritingContent() {
           <h3 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.05rem', color: '#1C1410', marginBottom: '0.5rem', lineHeight: 1.4 }}>
             Seeing Past the Pattern
           </h3>
-          <a href="https://arunimamandwariya.substack.com/p/seeing-past-the-pattern" target="_blank" rel="noopener noreferrer" style={{ fontFamily: '"DM Mono", monospace', fontSize: '9px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C4783A', textDecoration: 'none', borderBottom: '1px solid rgba(196,120,58,0.4)', paddingBottom: '1px' }}>Read on Substack →</a>
+          <a href="https://arunimamandwariya.substack.com/p/seeing-past-the-pattern-379?r=4ca2yl&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" target="_blank" rel="noopener noreferrer" style={{ fontFamily: '"DM Mono", monospace', fontSize: '9px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C4783A', textDecoration: 'none', borderBottom: '1px solid rgba(196,120,58,0.4)', paddingBottom: '1px' }}>Read on Substack →</a>
         </div>
         
         {/* Essay 3 */}
